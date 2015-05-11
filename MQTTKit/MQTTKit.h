@@ -66,6 +66,8 @@ typedef void (^MQTTDisconnectionHandler)(NSUInteger code);
 + (NSString*) version;
 
 - (MQTTClient*) initWithClientId: (NSString *)clientId;
+
+- (void) setMaxInflightMessages:(NSUInteger)maxInflightMessages;
 - (void) setMessageRetry: (NSUInteger)seconds;
 
 #pragma mark - Connection
