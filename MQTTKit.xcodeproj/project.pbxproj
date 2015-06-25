@@ -58,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		16DF1A174E6FA82939A035EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		54AC1442824DBBD9A2C3B797 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		810E9B83F02C4436BD42599F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EEBC981816CAB00055100D /* libMQTTKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMQTTKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EEBC9B1816CAB00055100D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,7 +103,6 @@
 		93F20A76181A68AB00C34747 /* will_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = will_mosq.h; sourceTree = "<group>"; };
 		93F20A9B181A692F00C34747 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		93F20A9C181A76AF00C34747 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		A797E8F33F5B405EBBDAF5D9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		799D2C693A324B0C6FEC7547 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54AC1442824DBBD9A2C3B797 /* Pods.debug.xcconfig */,
+				16DF1A174E6FA82939A035EC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		93EEBC8F1816CAB00055100D = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +147,7 @@
 				93EEBCB11816CAB00055100D /* MQTTKitTests */,
 				93EEBC9A1816CAB00055100D /* Frameworks */,
 				93EEBC991816CAB00055100D /* Products */,
-				A797E8F33F5B405EBBDAF5D9 /* Pods.xcconfig */,
+				799D2C693A324B0C6FEC7547 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,7 +340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C96253BCE6574CEFA2AEA282 /* Check Pods Manifest.lock */ = {
@@ -491,7 +501,7 @@
 		};
 		93EEBCBC1816CAB00055100D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A797E8F33F5B405EBBDAF5D9 /* Pods.xcconfig */;
+			baseConfigurationReference = 54AC1442824DBBD9A2C3B797 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MQTTKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -504,7 +514,7 @@
 		};
 		93EEBCBD1816CAB00055100D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A797E8F33F5B405EBBDAF5D9 /* Pods.xcconfig */;
+			baseConfigurationReference = 16DF1A174E6FA82939A035EC /* Pods.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MQTTKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -517,7 +527,6 @@
 		};
 		93EEBCBF1816CAB00055100D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A797E8F33F5B405EBBDAF5D9 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
