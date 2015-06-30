@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   #s.dependency 'OpenSSL-Universal', '~> 1.0'
-  s.depenedncy 'OpenSSL-Static'
+  #s.depenedncy 'OpenSSL-Static'
 end
